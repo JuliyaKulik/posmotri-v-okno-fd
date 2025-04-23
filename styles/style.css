@@ -59,8 +59,11 @@ ol {
   grid-template-areas:
   "result content__details";
   width:  1140px;
+  min-height: 534px;
   margin-left: 30px;
   margin-right: 30px;
+  margin-top: 133px;
+  margin-bottom: 133px;
   align-items: end;
 }
 
@@ -82,12 +85,47 @@ ol {
 .search-form {
   display: flex;
   justify-content: space-between;
+
+}
+
+.search-form__fieldset {
+  border: none;
+ 
+}
+
+.search-form__textfield {
+  border: none;
+  background-color: transparent;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  color: rgb(255 255 255 / .7);
+}
+
+.button {
+  border: 1px solid #fff;
+  background-color: transparent;
+  font-family: Fira Sans Condensed;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  text-align: center;
+  color: #fff;
+  min-height: 34px;
+}
+
+.search-form__submit-button {
+  min-width: 194px;
+  margin-top: 20px;
+}
+
+.more-button {
+  min-width: 390px;
+  margin-top: 30px;
 }
 
 .content__details {
   grid-area: content__details;
-  height: 100%;
-  width: 100%;
+ 
 }
 
 .content__list-container {
@@ -98,5 +136,71 @@ ol {
 .title {
   padding-right: 140px;
   padding-bottom: 26px;
+  font-family: Oswald;
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 94%;
+  text-transform: uppercase;
+
 }
 
+.content__accent {
+  color: #545050;
+}
+
+.content__list {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+}
+
+.content__card-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.content__video-card {
+  display: flex;
+  align-items: start;
+}
+
+.content__video-card-title {
+  font-family: Oswald;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 100%;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.content__video-card-description {
+  font-family: Fira Sans Condensed;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 16.2px;
+  -webkit-line-clamp: 4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 103px;
+  object-position: center;
+  object-fit: contain;
+
+}
+
+.content__video-card-description-container {
+  flex-grow: 1;
+}
+
+.search-form__fieldset-title {
+  font-family: Fira Sans Condensed;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+}
