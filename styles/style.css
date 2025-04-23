@@ -114,8 +114,29 @@ ol {
   outline: 1px solid #fff;
 }
 
-.search-form__label:has(input:focus-visible) {
+.search-form__label {
+  display: flex;
+  width: fit-content;
+}
+
+.search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
+}
+
+.search-form__label-text {
+  font-family: Fira Sans Condensed;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  color: #fff;
+}
+
+.search-form__pseudo-checkbox {
+  width: 19px;
+  height: 19px;
+  border: 1px solid #fff;
+  background-color: transparent;
+  text-align: center;
 }
 
 .search-form__checkbox-list {
@@ -123,10 +144,13 @@ ol {
   gap: 15px;
 }
 
-.search-form__label {
-  display: flex;
-  width: fit-content;
+.search-form__pseudo-checkbox::after {
+  content: "";
+  background-color: #fff;
+  width: 18px;
+  height: 18px;
 }
+
 
 .button {
   border: 1px solid #fff;
