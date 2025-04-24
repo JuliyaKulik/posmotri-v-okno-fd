@@ -90,6 +90,9 @@ ol {
 
 .search-form__fieldset {
   border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .search-form__textfield {
@@ -117,10 +120,16 @@ ol {
 .search-form__label {
   display: flex;
   width: fit-content;
+  gap: 5px;
+}
+
+.search-form__pseudo-checkbox:hover + span {
+  text-decoration: underline;
 }
 
 .search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
+  outline-offset: 2px;
 }
 
 .search-form__label-text {
@@ -136,7 +145,9 @@ ol {
   height: 19px;
   border: 1px solid #fff;
   background-color: transparent;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .search-form__checkbox-list {
@@ -147,9 +158,16 @@ ol {
 .search-form__pseudo-checkbox::after {
   content: "";
   background-color: #fff;
+  width: 15px;
+  height: 15px;
+}
+
+.search-form__checkbox:checked + span {
+  background-color: #fff;
   width: 18px;
   height: 18px;
 }
+
 
 
 .button {
