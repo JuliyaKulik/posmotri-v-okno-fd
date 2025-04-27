@@ -207,7 +207,7 @@ ol {
 
 .content__list-container {
   overflow: auto;
-  height: 298px;
+  max-height: 298px;
 }
 
 .title {
@@ -230,6 +230,11 @@ ol {
   flex-direction: column;
 }
 
+.content__list-item {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
 .content__card-link {
   text-decoration: none;
   color: #fff;
@@ -239,6 +244,24 @@ ol {
   display: flex;
   align-items: start;
 }
+
+.content__video-card:focus {
+  outline: none;
+}
+
+.content__video-card:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 2px;
+}
+
+/*.content__card-link_current:active {
+  background-color: #545050;
+}
+*/
+.content__video-card:active {
+  background-color: #545050;
+}
+
 
 .content__video-card-title {
   font-family: Oswald;
@@ -262,12 +285,15 @@ ol {
   overflow: hidden;
 }
 
+.content__video-card-description-container:hover {
+  text-decoration: underline;
+}
+
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
   object-position: center;
-  object-fit: contain;
-
+  object-fit: cover;
 }
 
 .content__video-card-description-container {
